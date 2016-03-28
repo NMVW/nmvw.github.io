@@ -1,0 +1,170 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Node you didn't</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/screen.css?v=33e40e5b94">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="http://nmvw.github.io/2016/03/28/node-you-didnt/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Nick Vinson - Open Source Engineer">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Node you didn't">
+    <meta property="og:description" content="Asynch(irony) A core node module built to handle file i/o, fs, has been the focus of my learning curve these past couple of hours. Up until this point in my life, I had only dealt with sending raw, server-generated data via http using node's core http module. Now">
+    <meta property="og:url" content="http://nmvw.github.io/2016/03/28/node-you-didnt/">
+    <meta property="article:published_time" content="2016-03-28T06:59:18.785Z">
+    <meta property="article:modified_time" content="2016-03-28T06:59:18.784Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Node you didn't">
+    <meta name="twitter:description" content="Asynch(irony) A core node module built to handle file i/o, fs, has been the focus of my learning curve these past couple of hours. Up until this point in my life, I had only dealt with sending raw, server-generated data via http using node's core http module. Now">
+    <meta name="twitter:url" content="http://nmvw.github.io/2016/03/28/node-you-didnt/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Nick Vinson - Open Source Engineer",
+    "author": {
+        "@type": "Person",
+        "name": "Nick Vinson",
+        "image": "//www.gravatar.com/avatar/ad7953fd3fbfd96ae4513b1097605b36?s=250&d=mm&r=x",
+        "url": "http://nmvw.github.io/author/nick/"
+    },
+    "headline": "Node you didn&#x27;t",
+    "url": "http://nmvw.github.io/2016/03/28/node-you-didnt/",
+    "datePublished": "2016-03-28T06:59:18.785Z",
+    "dateModified": "2016-03-28T06:59:18.784Z",
+    "description": "Asynch(irony) A core node module built to handle file i/o, fs, has been the focus of my learning curve these past couple of hours. Up until this point in my life, I had only dealt with sending raw, server-generated data via http using node&#x27;s core http module. Now"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Nick Vinson - Open Source Engineer" href="http://nmvw.github.io/rss/">
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="http://nmvw.github.io/">Home</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="http://nmvw.github.io/rss/">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Node you didn't</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-03-28">28 March 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h4 id="asynchirony">Asynch(irony)</h4>
+
+<p>A core node module built to handle file i/o, <code>fs</code>, has been the focus of my learning curve these past couple of hours. Up until this point in my life, I had only dealt with sending raw, server-generated data via http using node's core <code>http</code> module.</p>
+
+<p>Now I am faced with serving static assets to a client. After sending uninspiring url strings to the clients, showing off the locations of the assets the clients were missing out on, my pair partner and I found an answer: a client needed to be hand-fed data.</p>
+
+<h4 id="mentaldebugging">Mental Debugging</h4>
+
+<p>Time to debug my mental model of the client-server relationship… with a RESTful web service, the client cannot directly access any resources hosted by the server that are not explicitly prepared by the server itself.</p>
+
+<p>To tie it all up, <code>readFile</code> is an <code>fs</code> module method we discovered that will parse a file into a data structure that is ready to send on the response object of an HTTP request.</p>
+
+<p><em>Note</em>: Handling the HTTP <code>response.end</code> method beyond the scope of an asynchronous routine will guarantee that the response object will not wait on the completion of the asynchronous routine. A <code>readFile</code> method is such an example.</p>
+
+<p>#growthmindset
+#asynchrony</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../../../../author/nick/" style="background-image: url(http://www.gravatar.com/avatar/ad7953fd3fbfd96ae4513b1097605b36?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Nick Vinson's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../../../../author/nick/">Nick Vinson</a></h4>
+
+                    <p>Read <a href="../../../../author/nick/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Orlando, Florida</span>
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Node%20you%20didn't&amp;url=http://nmvw.github.io/2016/03/28/node-you-didnt/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://nmvw.github.io/2016/03/28/node-you-didnt/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://nmvw.github.io/2016/03/28/node-you-didnt/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../the-road/">
+        <section class="post">
+            <h2>Open Source</h2>
+            <p>People Brilliant people are contributing to technology without expecting a return. When I first heard about a community where…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://nmvw.github.io">Nick Vinson - Open Source Engineer</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    
+
+    <script type="text/javascript" src="../../../../assets/js/jquery.fitvids.js?v=33e40e5b94"></script>
+    <script type="text/javascript" src="../../../../assets/js/index.js?v=33e40e5b94"></script>
+
+</body>
