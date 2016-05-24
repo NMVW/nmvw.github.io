@@ -20,13 +20,13 @@
     <meta property="og:site_name" content="Nick Vinson. Software Engineer.">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Feelslike">
-    <meta property="og:description" content="Scope A brief project utilizing several open-sourced APIs, I conceived, designed, built and deployed a weather-matching service within 24 hours. MVP I started with something small and simple, a city weather-matching service. The app is freely accessible thanks to Heroku's deployment services and the source code is open to inspire">
+    <meta property="og:description" content="Scope I built a project snippet utilizing several open-sourced APIs, the result was a weather-matching service to match geographic regions based off of real-time weather conditions.  Here is the app and the corresponding source code. Have fun. Takeaways APIs After playing with the first API (OpenWeatherMap), I decided to integrate">
     <meta property="og:url" content="http://nmvw.github.io/2016/04/06/first-app-built/">
     <meta property="article:published_time" content="2016-04-06T04:26:28.427Z">
-    <meta property="article:modified_time" content="2016-05-20T06:25:44.312Z">
+    <meta property="article:modified_time" content="2016-05-24T01:53:26.620Z">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Feelslike">
-    <meta name="twitter:description" content="Scope A brief project utilizing several open-sourced APIs, I conceived, designed, built and deployed a weather-matching service within 24 hours. MVP I started with something small and simple, a city weather-matching service. The app is freely accessible thanks to Heroku's deployment services and the source code is open to inspire">
+    <meta name="twitter:description" content="Scope I built a project snippet utilizing several open-sourced APIs, the result was a weather-matching service to match geographic regions based off of real-time weather conditions.  Here is the app and the corresponding source code. Have fun. Takeaways APIs After playing with the first API (OpenWeatherMap), I decided to integrate">
     <meta name="twitter:url" content="http://nmvw.github.io/2016/04/06/first-app-built/">
     
     <script type="application/ld+json">
@@ -44,13 +44,16 @@
     "headline": "Feelslike",
     "url": "http://nmvw.github.io/2016/04/06/first-app-built/",
     "datePublished": "2016-04-06T04:26:28.427Z",
-    "dateModified": "2016-05-20T06:25:44.312Z",
-    "description": "Scope A brief project utilizing several open-sourced APIs, I conceived, designed, built and deployed a weather-matching service within 24 hours. MVP I started with something small and simple, a city weather-matching service. The app is freely accessible thanks to Heroku&#x27;s deployment services and the source code is open to inspire"
+    "dateModified": "2016-05-24T01:53:26.620Z",
+    "description": "Scope I built a project snippet utilizing several open-sourced APIs, the result was a weather-matching service to match geographic regions based off of real-time weather conditions.  Here is the app and the corresponding source code. Have fun. Takeaways APIs After playing with the first API (OpenWeatherMap), I decided to integrate"
 }
     </script>
 
     <meta name="generator" content="Ghost 0.7">
     <link rel="alternate" type="application/rss+xml" title="Nick Vinson. Software Engineer." href="http://nmvw.github.io/rss/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class="post-template nav-closed">
 
@@ -93,27 +96,21 @@
         <section class="post-content">
             <h4 id="scope">Scope</h4>
 
-<p>A brief project utilizing several open-sourced APIs, I conceived, designed, built and deployed a weather-matching service within 24 hours.</p>
+<p>I built a project snippet utilizing several open-sourced APIs, the result was a weather-matching service to match geographic regions based off of real-time weather conditions. </p>
 
-<h4 id="mvp">MVP</h4>
-
-<p>I started with something small and simple, a city weather-matching service. The <a href="http://feelsalotlike.herokuapp.com/">app</a> is freely accessible thanks to Heroku's deployment services and the <a href="https://github.com/NMVW/feelslike">source code</a> is open to inspire on GitHub.</p>
+<p>Here is the <a href="http://feelsalotlike.herokuapp.com/">app</a> and the corresponding <a href="https://github.com/NMVW/feelslike">source code</a>. Have fun.</p>
 
 <hr>
 
-<h4 id="lessons">Lessons</h4>
+<h4 id="takeaways">Takeaways</h4>
 
 <h6 id="apis">APIs</h6>
 
-<p>Upon successful integration of the first API (<a href="http://openweathermap.org/current">OpenWeatherMap</a>) into the project, I was careful to throttle my feature development. Aware of the realities of feature creeping, I continued on to integrate a forward geocoding API (<a href="https://geocoder.opencagedata.com/">OpenCageGeocoding</a>) to expand my data querying abilities with the initial API.</p>
+<p>After playing with the first API (<a href="http://openweathermap.org/current">OpenWeatherMap</a>), I decided to integrate a forward geocoding API (<a href="https://geocoder.opencagedata.com/">OpenCageGeocoding</a>) to extend the data querying scope from the initial API. To increase accuracy and performance, I should setup a cluster of servers to handle the data streams independently.</p>
 
 <h6 id="stack">Stack</h6>
 
-<p>I chose <a href="http://localhost:2368/2016/04/06/first-app-built/angularjs.org">AngularJS</a> and <a href="http://localhost:2368/2016/04/06/first-app-built/expressjs.com">ExpressJS</a>. With Express, I was serving static public assets with a couple of lines of code. The meat of the work was handled by Angular as I adopted a View-Controller design pattern.</p>
-
-<h6 id="uncertainty">Uncertainty</h6>
-
-<p>Piecing together unfamiliar technologies is always a fruitful experience. At the conclusion of the MVP, I had a deployed prototype for a highly scalable weather-matching service.</p>
+<p>I used <a href="http://localhost:2368/2016/04/06/first-app-built/angularjs.org">AngularJS</a> to handle the front-end and <a href="http://localhost:2368/2016/04/06/first-app-built/expressjs.com">ExpressJS</a> to handle the data channels. To improve on the real-time aspect of this service, I could use a network of CDNs to cache segments of incoming weather data, reducing data retrieval delays and focusing computational efforts regionally.</p>
         </section>
 
         <footer class="post-footer">
@@ -157,12 +154,6 @@
         <section class="post">
             <h2>Spidey Sense Alias</h2>
             <p>For those with whom I worked recently on a web security side project, it is time that I disclose…</p>
-        </section>
-    </a>
-    <a class="read-next-story prev no-cover" href="../../../03/28/node-you-didnt/">
-        <section class="post">
-            <h2>Node you didn't</h2>
-            <p>Asynch(irony) A core node module built to handle file i/o, fs, has been the focus of my…</p>
         </section>
     </a>
 </aside>
