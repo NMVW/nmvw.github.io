@@ -1,20 +1,54 @@
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head>
 
-    <title>TL;DR Nodal API: Twitter</title>
-    <meta name="description" content="">
+        <title>TL;DR Nodal API: Twitter</title>
+        <meta charset="utf-8">
+        <meta name="designer" content="Hayden Bleasel">
+        <meta name="rating" content="general">
+        <meta name="keywords" content="ghost, blog, TL;DR Nodal API: Twitter">
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="msapplication-TileImage" content="/assets/images/windows-tile.png?v=451adb80b8">
+        <meta name="msapplication-TileColor" content="#262A2D">
 
-    <link rel="shortcut icon" href="../favicon.ico">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=b187b4b568">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+        <meta property="og:title" content="TL;DR Nodal API: Twitter">
+        <meta property="og:locale" content="en_US">
 
-    <link rel="canonical" href="http://nmvw.github.io/untitled/">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="TL;DR Nodal API: Twitter">
+
+        <link rel="icon" href="../favicon.ico">
+        <link rel="icon" sizes="196x196" href="../assets/images/android-homescreen.png?v=451adb80b8">
+        <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png?v=451adb80b8">
+
+            <link rel="prerender" href="../content/images/2016/05/yosemite-2.jpg">
+            <link rel="prefetch" href="../content/images/2016/05/yosemite-2.jpg">
+        <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+
+        <link rel="stylesheet" href="../assets/css/normalize.css?v=451adb80b8">
+        <link rel="stylesheet" href="../assets/css/basics.css?v=451adb80b8">
+        <link rel="stylesheet" href="../assets/css/animate.css?v=451adb80b8">
+        <link rel="stylesheet" href="../assets/css/highlight.css?v=451adb80b8">
+        <link rel="stylesheet" href="../assets/css/phantom.css?v=451adb80b8">
+        <script src="../assets/js/html5shiv-printshiv.js?v=451adb80b8"></script>
+        <script src="../assets/js/respond.js?v=451adb80b8"></script>
+
+            <meta name="author" content="Nick Vinson">
+    <meta name="description" content="A simple walkthrough on how to get a Nodal API that can service any messaging client via HTTP. Pre-reqs:  Nodal requires Node ^v5.0.0 to run A server running...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://nmvw.github.io/untitled/">
+    <meta property="twitter:url" content="http://nmvw.github.io/untitled/">
+    <meta property="og:description" content="A simple walkthrough on how to get a Nodal API that can service any messaging client via HTTP. Pre-reqs:  Nodal requires Node ^v5.0.0 to run A server running...">
+    <meta property="twitter:description" content="A simple walkthrough on how to get a Nodal API that can service any messaging client via HTTP. Pre-reqs:  Nodal requires Node ^v5.0.0 to run A server running...">
+
+
+        <link rel="canonical" href="http://nmvw.github.io/untitled/">
     <meta name="referrer" content="origin">
     
     <meta property="og:site_name" content="Nick Vinson. Software Engineer.">
@@ -54,47 +88,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body class="post-template nav-closed">
 
-    <div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="index.html#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-            <li class="nav-home" role="presentation"><a href="http://nmvw.github.io/">Home</a></li>
-            <li class="nav-node" role="presentation"><a href="http://nmvw.github.io/node/">Node</a></li>
-    </ul>
-    <a class="subscribe-button icon-feed" href="http://nmvw.github.io/rss/">Subscribe</a>
+    </head>
+    <body class="post-template">
+        <nav class="animated fadeIn navigation">
+            <div class="container">
+                <a href="http://nmvw.github.io" class="text-right sidebar brand">
+                    
+                </a>
+                <p class="content">Nick Vinson. Software Engineer.</p>
+            </div>
+        </nav>
+        <div class="main">
+            
+
+    
+    <header class="animated fadeIn">
+        <div class="container" data-stellar-ratio="0.75">
+            <div class="title animated fadeInUp">
+    <h1>TL;DR Nodal API: Twitter</h1>
+    <div class="share">
+    Share this on <a id="twitter" href="http://twitter.com/share?text=TL%3BDR%20Nodal%20API%3A%20Twitter&amp;url=http://nmvw.github.io/untitled/">Twitter</a>, <a id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://nmvw.github.io/untitled/">Facebook</a> or <a id="google-plus" href="https://plus.google.com/share?url=http://nmvw.github.io/untitled/">Google+</a>.
 </div>
-<span class="nav-cover"></span>
+</div>
+            <div class="sidebar text-right meta">
+    <div class="published animated fadeInUp">
+        <strong>Published</strong>
+        <time class="timeago" datetime="2016-05-23T21:20:50-04:00" title="May 23 '16 at 21:20">a day ago</time>
+    </div>
+    <span class="separator animated fadeInUp">//</span>
+    <div class="tags animated fadeInUp">
+    </div>
+</div>
+        </div>
+    </header>
 
+    <div class="push-article">
 
-    <div class="site-wrapper">
-
-        
-
-
-<header class="main-header post-head no-cover">
-    <nav class="main-nav  clearfix">
-        
-            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
-    </nav>
-</header>
-
-<main class="content" role="main">
-    <article class="post">
-
-        <header class="post-header">
-            <h1 class="post-title">TL;DR Nodal API: Twitter</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="2016-05-23">23 May 2016</time> 
-            </section>
-        </header>
-
-        <section class="post-content">
-            <p>A simple walkthrough on how to get a Nodal API<sup id="fnref:1"><a href="index.html#fn:1" rel="footnote">1</a></sup> that can service any messaging client via HTTP.</p>
+<article class="animated fadeIn post">
+    <div class="container">
+        <p>A simple walkthrough on how to get a Nodal API<sup id="fnref:1"><a href="index.html#fn:1" rel="footnote">1</a></sup> that can service any messaging client via HTTP.</p>
 
 <p><strong>Pre-reqs:</strong> </p>
 
@@ -233,72 +266,46 @@ class V1PlurbsController extends Nodal.Controller {
 We now have an extensible Nodal API service for handling a twitter client.</p>
 
 <div class="footnotes"><ol><li class="footnote" id="fn:1"><p>For the <a href="https://medium.com/@keithwhor/hello-nodal-why-we-re-building-node-js-servers-for-everybody-dce14b27a233#.e26mxwk3f">motivation</a> behind Nodal <a href="index.html#fnref:1" title="return to article">↩</a></p></li></ol></div>
-        </section>
-
-        <footer class="post-footer">
-
-
-            <figure class="author-image">
-                <a class="img" href="../author/nick/" style="background-image: url(../content/images/2016/05/profilepic.JPG)"><span class="hidden">Nick Vinson's Picture</span></a>
-            </figure>
-
-            <section class="author">
-                <h4><a href="../author/nick/">Nick Vinson</a></h4>
-
-                    <p>Nick Vinson. Software Engineer.</p>
-                <div class="author-meta">
-                    <span class="author-location icon-location">Boulder, CO</span>
-                    
-                </div>
-            </section>
-
-
-            <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=TL%3BDR%20Nodal%20API%3A%20Twitter&amp;url=http://nmvw.github.io/untitled/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                    <span class="hidden">Twitter</span>
-                </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://nmvw.github.io/untitled/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                    <span class="hidden">Facebook</span>
-                </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://nmvw.github.io/untitled/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                    <span class="hidden">Google+</span>
-                </a>
-            </section>
-
-        </footer>
-
-    </article>
-</main>
-
-<aside class="read-next">
-    <a class="read-next-story no-cover" href="../promises/">
-        <section class="post">
-            <h2>Node.js</h2>
-            <p>Beyond the Browser There is life for JavaScript beyond the browser, and Node.js is a vehicle through which…</p>
-        </section>
-    </a>
-    <a class="read-next-story prev no-cover" href="../http-requests/">
-        <section class="post">
-            <h2>Node: HTTP Server</h2>
-            <p>v6.2.0 A walkthrough of setting up a simple HTTP server using Node. To demonstrate the trade-offs that…</p>
-        </section>
-    </a>
-</aside>
-
-
-
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="http://nmvw.github.io">Nick Vinson. Software Engineer.</a> © 2016</section>
-            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-        </footer>
+    </div>
+</article>
 
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    
+    <div class="container">
+        <div class="author animated fadeIn clearfix">
+                <img src="../content/images/2016/05/profilepic.JPG" alt="Nick Vinson">
+                <div class="info">
+                    <a href="../author/nick/" class="name">Nick Vinson</a>
+                    <p class="bio">Nick Vinson. Software Engineer.</p>
+                </div>
+        </div>
+    </div>
 
-    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=b187b4b568"></script>
-    <script type="text/javascript" src="../assets/js/index.js?v=b187b4b568"></script>
 
-</body>
+
+        </div>
+        <footer class="animated fadeIn" id="footer">
+            <div class="container text-center">
+                <p class="copyright"><span>Made by Nick Vinson. Software Engineer..</span> <span>Powered by Ghost.</span></p>
+                <a href="https://github.com/haydenbleasel/phantom" class="theme">Theme: Phantom by Hayden Bleasel</a>
+            </div>
+        </footer>
+
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write('<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js?v=451adb80b8"></'+'script>');
+        }
+        </script>
+        
+        <script src="../assets/js/fastclick.js?v=451adb80b8"></script>
+        <script src="../assets/js/stellar.js?v=451adb80b8"></script>
+        <script src="../assets/js/highlight.js?v=451adb80b8"></script>
+        <script src="../assets/js/phantom.js?v=451adb80b8"></script>
+        <script src="../assets/js/jquery.timeago.min.js?v=451adb80b8"></script>
+
+        <script>jQuery(document).ready(function() { jQuery("time.timeago").timeago(); });</script>
+
+    </body>
