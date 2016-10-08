@@ -1,0 +1,197 @@
+
+    <head>
+
+        <title>Recursion: Stack got your tongue?</title>
+        <meta charset="utf-8">
+        <meta name="designer" content="Hayden Bleasel">
+        <meta name="rating" content="general">
+        <meta name="keywords" content="ghost, blog, Recursion: Stack got your tongue?">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="msapplication-TileImage" content="/assets/images/windows-tile.png?v=836ded3fa4">
+        <meta name="msapplication-TileColor" content="#262A2D">
+
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <meta property="og:title" content="Recursion: Stack got your tongue?">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="Recursion: Stack got your tongue?">
+
+        <link rel="icon" href="../favicon.ico">
+        <link rel="icon" sizes="196x196" href="../assets/images/android-homescreen.png?v=836ded3fa4">
+        <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png?v=836ded3fa4">
+
+            <link rel="prerender" href="../content/images/2016/05/yosemite-2.jpg">
+            <link rel="prefetch" href="../content/images/2016/05/yosemite-2.jpg">
+        <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+
+        <link rel="stylesheet" href="../assets/css/normalize.css?v=836ded3fa4">
+        <link rel="stylesheet" href="../assets/css/basics.css?v=836ded3fa4">
+        <link rel="stylesheet" href="../assets/css/animate.css?v=836ded3fa4">
+        <link rel="stylesheet" href="../assets/css/highlight.css?v=836ded3fa4">
+        <link rel="stylesheet" href="../assets/css/phantom.css?v=836ded3fa4">
+        <script src="../assets/js/html5shiv-printshiv.js?v=836ded3fa4"></script>
+        <script src="../assets/js/respond.js?v=836ded3fa4"></script>
+
+            <meta name="author" content="Nick Vinson">
+    <meta name="description" content="Elusive, subtle, and unintuitive, recursive thinking is a fundamental pattern that defines much of the world.  The trickiest part to understanding recursion...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://nmvw.github.io/recursion/">
+    <meta property="twitter:url" content="http://nmvw.github.io/recursion/">
+    <meta property="og:description" content="Elusive, subtle, and unintuitive, recursive thinking is a fundamental pattern that defines much of the world.  The trickiest part to understanding recursion...">
+    <meta property="twitter:description" content="Elusive, subtle, and unintuitive, recursive thinking is a fundamental pattern that defines much of the world.  The trickiest part to understanding recursion...">
+        <meta property="og:image" content="/content/images/2016/10/Inception-Totem-Wallpaper-1.jpg">
+        <meta property="twitter:image" content="/content/images/2016/10/Inception-Totem-Wallpaper-1.jpg">
+
+
+        <link rel="canonical" href="http://nmvw.github.io/recursion/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Nick Vinson. Software Engineer.">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Recursion: Stack got your tongue?">
+    <meta property="og:description" content="Elusive, subtle, and unintuitive, recursive thinking is a fundamental pattern that defines much of the world.  The trickiest part to understanding recursion is to figure out how to clearly define the recursive problem. Base Case Define it concisely and carefully. The base case signals the completion of our algorithm. Think">
+    <meta property="og:url" content="http://nmvw.github.io/recursion/">
+    <meta property="og:image" content="http://nmvw.github.io/content/images/2016/10/Inception-Totem-Wallpaper-1.jpg">
+    <meta property="article:published_time" content="2016-10-08T04:10:19.532Z">
+    <meta property="article:modified_time" content="2016-10-08T05:05:24.503Z">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recursion: Stack got your tongue?">
+    <meta name="twitter:description" content="Elusive, subtle, and unintuitive, recursive thinking is a fundamental pattern that defines much of the world.  The trickiest part to understanding recursion is to figure out how to clearly define the recursive problem. Base Case Define it concisely and carefully. The base case signals the completion of our algorithm. Think">
+    <meta name="twitter:url" content="http://nmvw.github.io/recursion/">
+    <meta name="twitter:image:src" content="http://nmvw.github.io/content/images/2016/10/Inception-Totem-Wallpaper-1.jpg">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Nick Vinson. Software Engineer.",
+    "author": {
+        "@type": "Person",
+        "name": "Nick Vinson",
+        "image": "http://nmvw.github.io/content/images/2016/05/profilepic.JPG",
+        "url": "http://nmvw.github.io/author/nick/",
+        "description": "Nick Vinson. Software Engineer."
+    },
+    "headline": "Recursion: Stack got your tongue?",
+    "url": "http://nmvw.github.io/recursion/",
+    "datePublished": "2016-10-08T04:10:19.532Z",
+    "dateModified": "2016-10-08T05:05:24.503Z",
+    "image": "http://nmvw.github.io/content/images/2016/10/Inception-Totem-Wallpaper-1.jpg",
+    "description": "Elusive, subtle, and unintuitive, recursive thinking is a fundamental pattern that defines much of the world.  The trickiest part to understanding recursion is to figure out how to clearly define the recursive problem. Base Case Define it concisely and carefully. The base case signals the completion of our algorithm. Think"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Nick Vinson. Software Engineer." href="http://nmvw.github.io/rss/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body class="post-template">
+        <nav class="animated fadeIn navigation">
+            <div class="container">
+                <a href="http://nmvw.github.io" class="text-right sidebar brand">
+                    
+                </a>
+                <p class="content">Nick Vinson. Software Engineer.</p>
+            </div>
+        </nav>
+        <div class="main">
+            
+
+    
+    <header class="animated fadeIn" style="background-image: url(../content/images/2016/10/Inception-Totem-Wallpaper-1.jpg)">
+        <div class="container" data-stellar-ratio="0.75">
+            <div class="title animated fadeInUp">
+    <h1>Recursion: Stack got your tongue?</h1>
+    <div class="share">
+    Share this on <a id="twitter" href="http://twitter.com/share?text=Recursion%3A%20Stack%20got%20your%20tongue%3F&amp;url=http://nmvw.github.io/recursion/">Twitter</a>, <a id="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://nmvw.github.io/recursion/">Facebook</a> or <a id="google-plus" href="https://plus.google.com/share?url=http://nmvw.github.io/recursion/">Google+</a>.
+</div>
+</div>
+            <div class="sidebar text-right meta">
+    <div class="published animated fadeInUp">
+        <strong>Published</strong>
+        <time class="timeago" datetime="2016-10-07T22:10:19-06:00" title="October 7 '16 at 22:10">an hour ago</time>
+    </div>
+    <span class="separator animated fadeInUp">//</span>
+    <div class="tags animated fadeInUp">
+    </div>
+</div>
+        </div>
+    </header>
+
+    <div class="push-article">
+
+<article class="animated fadeIn post">
+    <div class="container">
+        <p>Elusive, subtle, and unintuitive, recursive thinking is a fundamental pattern that defines much of the world. </p>
+
+<p>The trickiest part to understanding recursion is to figure out how to clearly define the recursive problem.</p>
+
+<h6 id="basecase">Base Case</h6>
+
+<p>Define it concisely and carefully. The base case signals the completion of our algorithm. Think of it as the quantum unit of your solution. Without it, you'll never find an answer; with it, we have a shot at massaging a solution. Always begin your recursive thinking with a powerful base case in mind to reduce algorithmic complexity.</p>
+
+<h6 id="recursivecase">Recursive Case</h6>
+
+<p>The circular logic that drives the algorithm to our outcome, the recursive case unravels our complex problem into increasingly digestible fragments that behave similarly enough to their ancestral fragments to be described with a simple relationship.</p>
+
+<p><img src="../content/images/2016/10/inception-1920x1080-wallpaper-829789.jpg" alt=""></p>
+
+<h4 id="mindset">Mindset</h4>
+
+<p>Recursion is a way of thinking that approaches problem-solving as the pursuit of the minimal symmetrical interface that reflects internally within a larger problem. Once a prime example (pun intended) is discovered, one can leverage that indivisible schema to build a solution for the greater problem. It is a tool for a pragmatist to induct complex non-linear problems with bite-sized bits of logic while hammering on computational resources to coax a solution.</p>
+
+<p>Note: Tail end is the optimal type of algorithm design for recursion because the stack frame can be freed at each inceptive level of the call stack. <br>
+Imagine that each level of your consciousness was only held in memory as long as you were in it...</p>
+    </div>
+</article>
+
+    </div>
+
+    <div class="container">
+        <div class="author animated fadeIn clearfix">
+                <img src="../content/images/2016/05/profilepic.JPG" alt="Nick Vinson">
+                <div class="info">
+                    <a href="../author/nick/" class="name">Nick Vinson</a>
+                    <p class="bio">Nick Vinson. Software Engineer.</p>
+                </div>
+        </div>
+    </div>
+
+
+
+        </div>
+        <footer class="animated fadeIn" id="footer">
+            <div class="container text-center">
+                <p class="copyright"><span>Made by Nick Vinson. Software Engineer..</span> <span>Powered by Ghost.</span></p>
+                <a href="https://github.com/haydenbleasel/phantom" class="theme">Theme: Phantom by Hayden Bleasel</a>
+            </div>
+        </footer>
+
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write('<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js?v=836ded3fa4"></'+'script>');
+        }
+        </script>
+        
+        <script src="../assets/js/fastclick.js?v=836ded3fa4"></script>
+        <script src="../assets/js/stellar.js?v=836ded3fa4"></script>
+        <script src="../assets/js/highlight.js?v=836ded3fa4"></script>
+        <script src="../assets/js/phantom.js?v=836ded3fa4"></script>
+        <script src="../assets/js/jquery.timeago.min.js?v=836ded3fa4"></script>
+
+        <script>jQuery(document).ready(function() { jQuery("time.timeago").timeago(); });</script>
+
+    </body>
