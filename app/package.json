@@ -1,0 +1,46 @@
+{
+  "name": "nmvinson",
+  "version": "1.0.0",
+  "description": "me, myself, and i",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --env.hot",
+    "build": "node_modules/webpack/bin/webpack.js --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NMVW/nmvw.github.io.git"
+  },
+  "keywords": [
+    "self-expression",
+    "unconstrained",
+    "creativity"
+  ],
+  "author": "Nicolas Matthew Vinson Wauquiez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NMVW/nmvw.github.io/issues"
+  },
+  "homepage": "https://github.com/NMVW/nmvw.github.io#readme",
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react-hot-loader": "^4.8.0",
+    "webpack": "^4.29.6",
+    "webpack-bundle-analyzer": "^3.1.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
