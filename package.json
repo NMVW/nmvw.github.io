@@ -24,11 +24,20 @@
   },
   "homepage": "https://github.com/NMVW/nmvw.github.io#readme",
   "dependencies": {
+    "@date-io/date-fns": "^1.1.0",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "@nixster/pagedown": "^1.0.2",
+    "date-fns": "^2.0.0-alpha.27",
+    "lodash": "^4.17.11",
+    "material-ui-pickers": "^2.2.4",
+    "pagedown": "^1.1.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",

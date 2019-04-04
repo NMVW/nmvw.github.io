@@ -32,12 +32,10 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
 
     mode: "development",
 
-    entry: {
-      app: resolve('src/index.js'),
-    },
+    entry: resolve('src/index.js'),
 
     output: {
-      path: resolve('../api/public'),
+      path: resolve('dist/'),
       publicPath: '/',
       filename: '[name].bundle.js',
       chunkFilename: '[name].bundle.js'
@@ -47,7 +45,7 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
       alias: {
         client_config: resolve('config/app.json'),
         components: resolve('src/components/'),
-        // services: resolve('src/services/'),
+        assets: resolve('src/assets/')
       },
       extensions: ['*', '.js', '.jsx', ".ts", ".tsx"],
     },
@@ -55,10 +53,6 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
     module: {
 
       rules: [
-        {
-          test: /\.tsx?$/,
-          use: { loader: 'awesome-typescript-loader' }
-        },
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
@@ -79,7 +73,7 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
       new webpack.ProvidePlugin({
         CLIENT_CONFIG: 'client_config',
       }),
-      new CopyPlugin([{ from: 'src/favicon.ico', to: '../api/public'}]), // copy top-level independent favicon to served ../api/public/
+      new CopyPlugin([{ from: 'src/favicon.png', to: 'dist/'}]), // copy top-level independent favicon to served src//
       new HtmlPlugin({ template: resolve('src/index.html'), inject: 'body' }),
       new Analyzer.BundleAnalyzerPlugin({ analyzerPort: 9123 }) // bundle chunks visualizer
     ],
@@ -89,7 +83,7 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
   config.devtool = 'inline-source-map';
 
   config.devServer = {
-    contentBase: resolve('../api/public'),
+    contentBase: resolve('dist/'),
     compress: true,
     allowedHosts: ['localhost'],
     port: 3245,
