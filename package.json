@@ -29,11 +29,14 @@
     "@material-ui/icons": "^3.0.2",
     "@nixster/pagedown": "^1.0.2",
     "date-fns": "^2.0.0-alpha.27",
+    "h2m": "^0.7.0",
     "lodash": "^4.17.11",
     "material-ui-pickers": "^2.2.4",
     "pagedown": "^1.1.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-redux": "^7.0.1",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

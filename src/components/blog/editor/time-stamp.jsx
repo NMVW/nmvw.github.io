@@ -13,32 +13,21 @@ const styles = {
 };
 
 class TimestampPicker extends React.Component {
-  
-  state = {
-    // The first commit of Material-UI
-    selectedDate: new Date('2014-08-18T21:11:54'),
-  };
 
   constructor (props) {
     super(props);
-    if (props.now) this.state.selectedDate = props.now;
   }
 
-  handleDateChange = date => {
-    this.setState({ selectedDate: date });
-  };
-
   render() {
-    const { classes } = this.props;
-    const { selectedDate } = this.state;
+    const { classes, ts } = this.props;
 
     return (
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <Grid container className={classes.grid} justify="space-around">
           <DateTimePicker
-            value={selectedDate}
+            value={ts}
             disablePast
-            onChange={this.handleDateChange}
+            onChange={this.props.update}
             label="Post Date"
             showTodayButton
           />
