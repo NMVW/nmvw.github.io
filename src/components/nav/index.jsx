@@ -46,6 +46,7 @@ const styles = theme => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: theme.palette.primary.main,
   },
   content: {
     flexGrow: 1,
@@ -72,7 +73,7 @@ class ResponsiveDrawer extends React.Component {
         <List>
           {topViews.map(({name, value, icon}) => (
             <ListItem button key={value} onClick={ev => this.props.toView(value)}>
-              <ListItemIcon>{ icon }</ListItemIcon>
+              <ListItemIcon style={{color: 'white'}}>{ icon }</ListItemIcon>
             </ListItem>
           ))}
         </List>
