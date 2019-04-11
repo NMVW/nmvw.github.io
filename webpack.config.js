@@ -32,7 +32,7 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
 
     mode: "development",
 
-    entry: resolve('src/index.js'),
+    entry: resolve('src/bootstrap.js'),
 
     output: {
       path: resolve('dist/'),
@@ -44,7 +44,9 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
     resolve: {
       alias: {
         client_config: resolve('config/app.json'),
+        styles: resolve('config/styles.json'),
         components: resolve('src/components/'),
+        services: resolve('src/services/'),
         assets: resolve('src/assets/')
       },
       extensions: ['*', '.js', '.jsx', ".ts", ".tsx"],
@@ -63,7 +65,7 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
           use: ['raw']
         },
         {
-          test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|gltf|bin|glb|stl|trs)$/,
+          test: /\.(png|jpg|jpeg|gif|svg|eot|gltf|bin|glb|stl)$/,
           use: ['file-loader']
         }
       ]
@@ -72,6 +74,7 @@ module.exports = env => ((function(webpack, path, CopyPlugin, HtmlPlugin, Analyz
     plugins: [
       new webpack.ProvidePlugin({
         CLIENT_CONFIG: 'client_config',
+        STYLES: 'styles'
       }),
       new CopyPlugin([{ from: 'src/favicon.png', to: 'dist/'}]), // copy top-level independent favicon to served src//
       new HtmlPlugin({ template: resolve('src/index.html'), inject: 'body' }),

@@ -1,3 +1,11 @@
 {
-  "env": "dev"
+  "debug": true,
+  "stripe_api_key": "pk_test_1t5vLJ7rFZaseL4XB5v8Kdnq",
+  "ga_id": "UA-113011932-3",
+  "significant_digits": 12,
+  "round_mode": 1,
+  "posts_host": "http://post:8888",
+  "uistate_host": "http://uistate:9123",
+  "clientevents_host": "http://clientevents:9876",
+  "clientId": 1
 }

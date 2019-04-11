@@ -1,0 +1,21 @@
+{
+  "material_ui": {
+
+    "palette": {
+      "primary": {
+        "main": "#3B4550"
+      },
+      "secondary": {
+        "main": "#43C4F1"
+      },
+      "error": {
+        "main": "#F25454"
+      }
+    }
+  },
+
+  "3d": {
+
+    "mesh": "blue"
+  }
+}
